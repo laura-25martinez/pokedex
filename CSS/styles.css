@@ -1,0 +1,130 @@
+/* ---------------------------Configuraciones Generales------------------------ */
+@font-face {
+    font-family: 'Rancho';
+    src: url(../assets/fonts/Rancho/Rancho-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rancho', sans-serif;
+    background-color: #9bd3c7;
+}
+
+/* ---------------------------------------------------------------------------- */
+/* TODO------------------------------Cabecera------------------------------------- */
+header {
+    text-align: center;
+    background-color: #599eaa;
+}
+
+header img {
+    width: 20rem;
+    /* rem es una medida relativa 1rem equivale a 16px */
+}
+
+/* TODO--------------------------------------------------------------------------- */
+/* ? ------------------------- Contenido Principal--------------------------------*/
+/* contenedor principal de pokemones */
+
+#pokemons {
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.card {
+    text-align: center;
+    border: 0.8rem solid white;
+    border-radius: 15%;
+    background-color: #eca4f0;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+
+.card:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    color: rgb(0, 0, 0);
+}
+
+.card__img {
+    width: 9rem;
+}
+
+/* --------------------------------------------- */
+/* Detales de la tarjeta */
+.card__detail {
+    border: 8rem rgb(255, 255, 255);
+    border-radius: 5%;
+    
+}
+/* --------------------- */
+
+
+/* Botones de paginar */
+.pagination {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.pagination__item {
+    margin: 1rem;
+    color: white;
+    opacity: 0.5;
+    transition: opacity 0.3 ease;
+}
+
+.pagination__item:hover {
+    cursor: pointer;
+    opacity: 1;
+
+}
+
+/* ------------------ */
+
+/*  ---------------------------------------------------------------------------- */
+/* TODO -------------------------Pie de Página----------------------------------- */
+footer {
+    text-align: center;
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+}
+
+/* TODO ------------------------------------------------------------------------- */
+/* -------------------------------Media Queries---------------------------------- */
+@media (width <=320px) {
+    #pokemons {
+        grid-template-columns: repeat(1, 15rem);
+    }
+}
+
+@media (width >=768px) {
+    #pokemons {
+        grid-template-columns: repeat(2, 15rem);
+    }
+}
+
+@media (width >=1024px) {
+    #pokemons {
+        grid-template-columns: repeat(3, 15rem);
+    }
+}
+
+@media (width >=1440px) {
+    #pokemons {
+        grid-template-columns: repeat(4, 15rem);
+    }
+}
+
+@media (width >=2560px) {
+    #pokemons {
+        grid-template-columns: repeat(8, 15rem);
+    }
+}
+
+/* ------------------------------------------------------------------------------ */
